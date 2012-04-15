@@ -1,0 +1,60 @@
+# This table defines which USB function should be enabled
+# with the combination of USB properties.
+#
+# Meaning of table is below.
+# [STORAGE] [PROP] [RNDIS] [MSC] [MTP] [ADB] [MODEM] [NMEA] [DIAG] [USBSTATE]
+#
+# [STORAGE] : String of the persist.usb.storagemode property (msc or mtp)
+#
+# [PROP]    : Bit flag of properties.
+#             Top bit: persist.service.adb.enable
+#             2nd bit: persist.usb.eng
+#             3rd bit: usb.rndis.enable
+#             4th bit: usb.pcc.enable
+#
+# [RNDIS]   : Status of rndis function
+# [MSC]     : Status of mass storage function  1: MSC, 2: CD-ROM
+# [MTP]     : Status of mtp function
+# [ADB]     : Status of adb function
+# [MODEM]   : Status of modem function
+# [NMEA]    : Status of nmae function
+# [DIAG]    : Status of diag function
+# [USBSTATE]: String to indicate the mode
+#
+# Example: msc 1000 0 1 0 1 0 0 0 MSC+ADB
+#          Storage mode property is msc. Adb property is enabled.
+#          Eng, rndis and pc_companion properties are disabled.
+#          Then, enable adb and mass storage.
+#
+msc 1111 1 0 0 1 0 0 0 RNDIS+ADB
+msc 1110 1 0 0 1 0 0 0 RNDIS+ADB
+msc 1101 0 2 1 0 0 0 0 PC_COMPANION
+msc 1100 0 1 0 1 1 1 1 MSC+ADB+ENG
+msc 1011 1 0 0 1 0 0 0 RNDIS+ADB
+msc 1010 1 0 0 1 0 0 0 RNDIS+ADB
+msc 1001 0 2 1 0 0 0 0 PC_COMPANION
+msc 1000 0 1 0 1 0 0 0 MSC+ADB
+msc 0111 1 0 0 0 0 0 0 RNDIS
+msc 0110 1 0 0 0 0 0 0 RNDIS
+msc 0101 0 2 1 0 0 0 0 PC_COMPANION
+msc 0100 0 1 0 0 0 0 0 MSC
+msc 0011 1 0 0 0 0 0 0 RNDIS
+msc 0010 1 0 0 0 0 0 0 RNDIS
+msc 0001 0 2 1 0 0 0 0 PC_COMPANION
+msc 0000 0 1 0 0 0 0 0 MSC
+mtp 1111 1 0 0 1 0 0 0 RNDIS+ADB
+mtp 1110 1 0 0 1 0 0 0 RNDIS+ADB
+mtp 1101 0 2 1 0 0 0 0 PC_COMPANION
+mtp 1100 0 0 1 1 1 1 1 MTP+ADB+ENG
+mtp 1011 1 0 0 1 0 0 0 RNDIS+ADB
+mtp 1010 1 0 0 1 0 0 0 RNDIS+ADB
+mtp 1001 0 2 1 0 0 0 0 PC_COMPANION
+mtp 1000 0 0 1 1 0 0 0 MTP+ADB
+mtp 0111 1 0 0 0 0 0 0 RNDIS
+mtp 0110 1 0 0 0 0 0 0 RNDIS
+mtp 0101 0 2 1 0 0 0 0 PC_COMPANION
+mtp 0100 0 0 1 0 0 0 0 MTP
+mtp 0011 1 0 0 0 0 0 0 RNDIS
+mtp 0010 1 0 0 0 0 0 0 RNDIS
+mtp 0001 0 2 1 0 0 0 0 PC_COMPANION
+mtp 0000 0 0 1 0 0 0 0 MTP

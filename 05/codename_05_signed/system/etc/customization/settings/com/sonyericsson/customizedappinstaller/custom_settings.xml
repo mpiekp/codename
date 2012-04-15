@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings version="403">
+   <groups type="Application">
+      <group>
+         <setting key="app-name" runtime="false">com.apkinstall.apk</setting>
+         <setting key="deletable" runtime="false">true</setting>
+      </group>
+      <group>
+         <setting key="app-name" runtime="false">com.qoowaa.act.apk</setting>
+         <setting key="deletable" runtime="false">true</setting>
+      </group>
+      <group>
+         <setting key="app-name" runtime="false">com.whatsapp.apk</setting>
+         <setting key="deletable" runtime="false">true</setting>
+      </group>
+   </groups>
+</settings>

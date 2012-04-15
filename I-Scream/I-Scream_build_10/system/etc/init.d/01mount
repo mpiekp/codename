@@ -1,0 +1,8 @@
+#!/system/bin/sh
+#
+# remount all partitions with noatime,nodiratime;
+
+busybox mount -o remount,noatime,nodiratime /system
+busybox mount -o remount,noatime,nodiratime /data
+busybox mount -o remount,noatime,nodiratime /cache
+	

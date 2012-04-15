@@ -1,0 +1,65 @@
+#!/system/bin/sh
+# Copyright� 2011 Juwe11
+# 13.8.2011 Updated VM values - Thanks to [Kalis] for help
+# 18.8.2011 Added values for oom_adj
+
+if [ -e /sys/module/lowmemorykiller/parameters/adj ]; then
+	echo "0,2,4,6,14,15" > /sys/module/lowmemorykiller/parameters/adj
+fi
+
+if [ -e /sys/module/lowmemorykiller/parameters/minfree ]; then
+	echo "2048,3072,4096,6144,9216,12288" > /sys/module/lowmemorykiller/parameters/minfree
+fi
+
+if [ -e /proc/sys/vm/vfs_cache_pressure ]; then
+	echo "50" > /proc/sys/vm/vfs_cache_pressure
+fi
+
+if [ -e /proc/sys/vm/min_free_kbytes ]; then
+	echo "4096" > /proc/sys/vm/min_free_kbytes
+fi
+
+if [ -e /proc/sys/vm/oom_kill_allocating_task ]; then
+	echo "0" > /proc/sys/vm/oom_kill_allocating_task
+fi
+
+if [ -e /proc/sys/vm/dirty_expire_centisecs ]; then
+	echo "1000" > /proc/sys/vm/dirty_expire_centisecs
+fi
+
+if [ -e /proc/sys/vm/dirty_writeback_centisecs ]; then
+	echo "500" > /proc/sys/vm/dirty_writeback_centisecs
+fi
+
+if [ -e /proc/sys/vm/dirty_ratio ]; then
+	echo "25" > /proc/sys/vm/dirty_ratio
+fi
+
+if [ -e /proc/sys/vm/dirty_background_ratio ]; then
+	echo "5" > /proc/sys/vm/dirty_background_ratio
+fi
+
+if [ -e /proc/sys/vm/page-cluster ]; then
+	echo "0" > /proc/sys/vm/page-cluster
+fi
+
+if [ -e /proc/sys/vm/laptop_mode ]; then
+	echo "1" > /proc/sys/vm/laptop_mode
+fi
+
+if [ -e /proc/sys/vm/overcommit_memory ]; then
+	echo "1" > /proc/sys/vm/overcommit_memory
+fi
+
+if [ -e /proc/sys/vm/overcommit_ratio ]; then
+	echo "75" > /proc/sys/vm/overcommit_ratio
+fi
+
+if [ -e /proc/sys/vm/panic_on_oom ]; then
+	echo "0" > /proc/sys/vm/panic_on_oom
+fi
+
+sync;
+if [ -e /proc/sys/vm/drop_caches ]; then
+	echo 3 > /proc/sys/vm/drop_caches;
+fi

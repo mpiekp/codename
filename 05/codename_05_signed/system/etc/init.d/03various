@@ -1,0 +1,27 @@
+#!/system/bin/sh
+# edited by emannxperia
+
+rm -r /data/system/usagestats/*
+rm -r /data/system/appusagestats/*
+rm -r /data/system/dropbox/*
+rm -r /data/tombstones/*
+rm -r /data/anr/*
+busybox chmod 000 /data/system/userbehavior.db
+busybox chmod 000 /data/system/usagestats/
+busybox chmod 000 /data/system/dropbox/
+busybox chmod 000 /data/anr/
+busybox chmod 000 /data/tombstones/
+busybox chmod 000 /data/system/appusagestats/
+busybox chmod 000 /data/data/com.google.android.location/files/cache.cell
+busybox chmod 000 /data/data/com.google.android.location/files/cache.wifi
+
+# Disable logcat
+rm /dev/log/main
+
+#removes journalism
+tune2fs -o journal_data_writeback /block/path/to/system
+tune2fs -O ^has_journal /block/path/to/system
+tune2fs -o journal_data_writeback /block/path/to/cache
+tune2fs -O ^has_journal /block/path/to/cache
+tune2fs -o journal_data_writeback /block/path/to/data
+tune2fs -O ^has_journal /block/path/to/data

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings version="403">
+   <groups type="bookmark">
+      <group id="100">
+         <setting key="title" runtime="true">Discovery Green Tree Hugger</setting>
+         <setting key="url" runtime="true">http://www.treehugger.com</setting>
+      </group>
+      <group id="101">
+         <setting key="title" runtime="true">Discovery Planet Green</setting>
+         <setting key="url" runtime="true">http://www.planetgreen.com</setting>
+      </group>
+      <group id="102">
+         <setting key="title" runtime="true">Google</setting>
+         <setting key="url" runtime="true">http://www.google.com/m?client=ms-android-sonyericsson&amp;channel=bm</setting>
+      </group>
+      <group id="103">
+         <setting key="title" runtime="true">GreenHeart info</setting>
+         <setting key="url" runtime="true">http://m.sonyericsson.com/greenheart</setting>
+      </group>
+      <group id="104">
+         <setting key="title" runtime="true">Recycle phone</setting>
+         <setting key="url" runtime="true">http://www.sonyericsson.com/recycle</setting>
+      </group>
+      <group id="105">
+         <setting key="title" runtime="true">Renewable Energy Green World</setting>
+         <setting key="url" runtime="true">http://www.renewableenergyworld.com</setting>
+      </group>
+      <group id="106">
+         <setting key="title" runtime="true">Sony Ericsson</setting>
+         <setting key="url" runtime="true">http://touch.sonyericsson.com</setting>
+      </group>
+   </groups>
+</settings>

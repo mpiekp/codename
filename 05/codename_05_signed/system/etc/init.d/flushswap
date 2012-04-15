@@ -1,0 +1,23 @@
+#!/system/bin/sh
+
+pids="`dumpsys activity | grep "(empty)" | grep "^.*App.*ProcessRecord{" | cut -c 40- | awk '{ print $2 }'|awk '{FS=":" ; print $1; }'`"
+
+# Where N is a number
+# use 'N' for seconds
+# use 'N'm for minutes
+# use 'N'h for hours
+delay="5m"
+
+while true; do
+
+  # we run sleep first so pids are only killed 5 minutes the device boots
+  sleep $delay
+
+  for pid in $pids; do
+
+    # if there are no pids to kill don't run kill command
+    test "$pids" = "" || kill -15 $pid
+
+  done
+
+done

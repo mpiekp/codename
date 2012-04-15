@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings version="403">
+   <setting key="start-on-jit" runtime="false">false</setting>
+   <setting key="device-reg-enabled" runtime="false">false</setting>
+</settings>

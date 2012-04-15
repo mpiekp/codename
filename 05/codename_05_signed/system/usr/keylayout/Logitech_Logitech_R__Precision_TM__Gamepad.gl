@@ -1,0 +1,12 @@
+# Logitech Logitech(R) Precision(TM) Gamepad
+key     0   BUTTON_X          WAKE_DROPPED   # KEY1
+key     1   DPAD_CENTER       WAKE_DROPPED   # KEY2
+key     2   BACK              WAKE_DROPPED   # KEY3
+key     3   BUTTON_Y          WAKE_DROPPED   # KEY4
+key     4   BUTTON_L1         WAKE_DROPPED   # L1
+key     5   BUTTON_R1         WAKE_DROPPED   # R1
+key     8   BUTTON_START      WAKE_DROPPED   # START
+key     9   BACK              WAKE_DROPPED   # BACK
+
+direkey 0   DPAD_X            WAKE_DROPPED   # DPAD_X
+direkey 1   DPAD_Y            WAKE_DROPPED   # DPAD_Y

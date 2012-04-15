@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings version="412">
+<setting key="national_data_roaming_visibility" runtime="false">true</setting>
+<setting key="national_data_roaming_setting" runtime="false">1</setting>
+<setting key="data-connection-except-mms-can-clear-icon" runtime="false">true</setting>
+<setting key="data-connection-except-mms-show-icon-when-enabled" runtime="false">true</setting>
+<setting key="data-connection-except-mms-show-icon-when-disabled" runtime="true">false</setting>
+<setting key="dual-mic-noise-suppression-enabled" runtime="true">true</setting>
+</settings>

@@ -1,0 +1,17 @@
+# Generic X-Box pad
+key     0   DPAD_CENTER       WAKE_DROPPED   # KEY1 or KEY A
+key     1   BACK              WAKE_DROPPED   # KEY2 or KEY B
+key     2   BUTTON_X          WAKE_DROPPED   # KEY3 or KEY X
+key     3   BUTTON_Y          WAKE_DROPPED   # KEY4 or KEY Y
+key     4   BUTTON_L1         WAKE_DROPPED   # L1
+key     5   BUTTON_R1         WAKE_DROPPED   # R1
+key     6   BUTTON_START      WAKE_DROPPED   # START
+key     10  BACK              WAKE_DROPPED   # BACK
+
+direkey 6   DPAD_X            WAKE_DROPPED   # DPAD_X
+direkey 7   DPAD_Y            WAKE_DROPPED   # DPAD_Y
+
+axis    0   AXIS_LX           WAKE_DROPPED   # AXIS_LX
+axis    1   AXIS_LY           WAKE_DROPPED   # AXIS_LY
+axis    3   AXIS_RX           WAKE_DROPPED   # AXIS_RX
+axis    4   AXIS_RY           WAKE_DROPPED   # AXIS_RY

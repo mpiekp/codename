@@ -1,0 +1,19 @@
+#!/system/bin/sh
+# edited by emannxperia
+
+rm -r /data/local/tmp/*
+rm -r /data/tmp/*
+rm -r /data/system/usagestats/*
+rm -r /data/system/appusagestats/*
+rm -r /data/system/dropbox/*
+rm -r /data/tombstones/*
+busybox chmod 000 /data/system/userbehavior.db
+busybox chmod 000 /data/system/usagestats/
+busybox chmod 000 /data/system/dropbox/
+busybox chmod 000 /data/tombstones/
+busybox chmod 000 /data/system/appusagestats/
+busybox chmod 000 /data/data/com.google.android.location/files/cache.cell
+busybox chmod 000 /data/data/com.google.android.location/files/cache.wifi
+
+# Disable logcat
+rm /dev/log/main

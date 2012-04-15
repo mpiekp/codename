@@ -1,0 +1,5 @@
+#!/sbin/busybox sh
+# Set swapiness 10
+# edited by Night-Elf
+
+/sbin/busybox echo "10" > /proc/sys/vm/swappiness

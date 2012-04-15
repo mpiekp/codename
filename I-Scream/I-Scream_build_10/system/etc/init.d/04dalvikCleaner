@@ -1,0 +1,56 @@
+#!/system/bin/sh
+#
+# Clean outdated dalvik cache entries
+# Modded by Mike Lierman | www.mikelierman.com
+# Oringinal author is unknown
+# edited by emannxperia
+
+export DALVIK=dalviknotfound;
+busybox mount -o remount,rw -t auto /system;
+busybox mount -o remount,rw -t auto /data;
+
+if [ -e "/data/dalvik-cache/system@framework@services.jar@classes.dex" ];
+then
+	export DALVIK=/data/dalvik-cache;
+fi;
+
+if [ -e "/cache/dalvik-cache/system@framework@services.jar@classes.dex" ];
+then
+	export DALVIK=/cache/dalvik-cache;
+fi;
+
+if [ -e "/system/sd/dalvik-cache/system@framework@services.jar@classes.dex" ];
+then
+	export DALVIK=/system/sd/dalvik-cache;
+fi;
+
+if [ "$DALVIK" != "dalviknotfound" ];
+then
+	cd "$DALVIK"
+	for dex in data@app@*.dex
+	do
+		apk=`echo "$dex" | sed "s/data@app@//g" | sed "s/@classes.*//g"`;
+		if [ ! -e "/data/app/$apk" ];
+		then
+			rm $dex;
+		fi;
+	done;
+
+	for dex in system@app@*.dex
+	do
+		apk=`echo "$dex" | sed "s/system@app@//g" | sed "s/@classes.*//g"`;
+		if [ ! -e "/system/app/$apk" ];
+		then
+			rm $dex;
+		fi;
+	done;
+
+	for dex in system@framework@*.dex
+	do
+		jar=`echo "$dex" | sed "s/system@framework@//g" | sed "s/@classes.*//g"`;
+		if [ ! -e "/system/framework/$jar" ];
+		then
+			rm $dex;
+		fi;
+	done;
+fi;

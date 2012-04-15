@@ -1,0 +1,20 @@
+# Generic game pad
+key     0   DPAD_CENTER       WAKE_DROPPED   # KEY A
+key     1   BACK              WAKE_DROPPED   # KEY B
+key     2   BUTTON_C          WAKE_DROPPED   # KEY C
+key     3   BUTTON_X          WAKE_DROPPED   # KEY X
+key     4   BUTTON_Y          WAKE_DROPPED   # KEY Y
+key     5   BUTTON_Z          WAKE_DROPPED   # KEY Z
+key     6   BUTTON_START      WAKE_DROPPED   # START
+key     7   BACK              WAKE_DROPPED   # BACK
+key     8   BUTTON_START      WAKE_DROPPED   # START
+key     9   BUTTON_THUMBL     WAKE_DROPPED   # THUMBL
+key     10  BUTTON_THUMBR     WAKE_DROPPED   # BACK
+
+direkey 5   DPAD_X            WAKE_DROPPED   # DPAD_X
+direkey 6   DPAD_Y            WAKE_DROPPED   # DPAD_Y
+
+axis    0   AXIS_LX           WAKE_DROPPED   # AXIS_LX
+axis    1   AXIS_LY           WAKE_DROPPED   # AXIS_LY
+axis    3   AXIS_RX           WAKE_DROPPED   # AXIS_RX
+axis    4   AXIS_RY           WAKE_DROPPED   # AXIS_RY

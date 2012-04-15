@@ -1,0 +1,8 @@
+#!/sbin/busybox sh
+# Script to start zRam (Virtual Swap Compressed in RAM)
+# Size of swap space in MB
+# default 32MB (32*1024*1024)
+
+/sbin/busybox echo "33554432" > /sys/block/zram0/disksize
+/sbin/busybox mkswap /dev/block/zram0
+/sbin/busybox swapon /dev/block/zram0

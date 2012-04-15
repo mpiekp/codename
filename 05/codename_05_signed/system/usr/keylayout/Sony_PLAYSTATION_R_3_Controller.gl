@@ -1,0 +1,18 @@
+# Sony PLAYSTATION(R)3 Controller
+key     0   BUTTON_SELECT     WAKE_DROPPED   # KEY SELECT
+key     3   BUTTON_START      WAKE_DROPPED   # KEY START
+key     4   DPAD_UP           WAKE_DROPPED   # KEY UP
+key     5   DPAD_RIGHT        WAKE_DROPPED   # KEY RIGHT
+key     6   DPAD_DOWN         WAKE_DROPPED   # KEY DOWN
+key     7   DPAD_LEFT         WAKE_DROPPED   # KEY LEFT
+key     10  BUTTON_L1         WAKE_DROPPED   # KEY L1
+key     11  BUTTON_R1         WAKE_DROPPED   # KEY R1
+key     12  BUTTON_Y          WAKE_DROPPED   # KEY Triangle
+key     13  BACK              WAKE_DROPPED   # KEY Circle
+key     14  DPAD_CENTER       WAKE_DROPPED   # KEY Cross
+key     15  BUTTON_X          WAKE_DROPPED   # KEY Square
+
+axis    0   AXIS_LX           WAKE_DROPPED   # AXIS_LX
+axis    1   AXIS_LY           WAKE_DROPPED   # AXIS_LY
+axis    2   AXIS_RX           WAKE_DROPPED   # AXIS_RX
+axis    3   AXIS_RY           WAKE_DROPPED   # AXIS_RY

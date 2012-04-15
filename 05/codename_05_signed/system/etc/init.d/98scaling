@@ -1,0 +1,45 @@
+#!/system/bin/sh
+# edited by emannxperia
+
+if [ ! -e /data/system/packages.xml ] ; then
+
+	/system/bin/logwrapper /system/xbin/scaling
+
+  exit 0
+
+else
+
+		  if /system/xbin/busybox grep -o "ch.amana.android.cputuner" /data/system/packages.xml ; then
+			exit 0
+		  fi
+
+		  if /system/xbin/busybox grep -o "com.mhuang.overclocking" /data/system/packages.xml ; then
+			exit 0
+		  fi
+
+		  if /system/xbin/busybox grep -o "org.freecoder.widgets.overclock" /data/system/packages.xml ; then
+			exit 0
+		  fi
+
+
+		  if /system/xbin/busybox grep -o "com.antutu.CpuMaster" /data/system/packages.xml ; then
+			exit 0
+		  fi
+
+		  if /system/xbin/busybox grep -o "com.antutu.CpuMasterFree" /data/system/packages.xml ; then
+			exit 0
+		  fi
+
+		  if /system/xbin/busybox grep -o "it.sineo.android.noFrillsCPU" /data/system/packages.xml ; then
+			exit 0
+		  fi
+
+		  if /system/xbin/busybox grep -o "com.SetXperia.Inteks.org" /data/system/packages.xml ; then
+			exit 0
+		  fi
+
+#
+
+	/system/bin/logwrapper /system/xbin/scaling
+
+fi
